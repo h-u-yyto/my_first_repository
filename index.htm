@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>久しぶりのHTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ブロック要素 -->
+    <div>
+        <p>縦に並びます</p>
+        <p>縦に並びます</p>
+        <p>縦に並びます</p>
+    </div>
+    
+    <!-- インライン要素 -->
+    <div>
+        <span>横に並びます</span>
+        <span>横に並びます</span>
+        <span>横に並びます</span>
+    </div>
+
+    <!-- 見出し -->
+    <div>
+        <h1>見出し1</h1>
+        <h2>見出し2</h2>
+        <h3>見出し3</h3>
+        <h4>見出し4</h4>
+        <h5>見出し5</h5>
+        <h6>見出し6</h6>
+    </div>
+
+    <!-- 改行 -->
+    <div>
+        <p>ここは最初の段落です。<br>ここで改行されます。</p>
+    </div>
+
+    <!-- リスト -->
+    <div>
+        <ul>
+            <li>項目A</li>
+            <li>項目B</li>
+        </ul>
+
+        <ol>
+            <li>項目1</li>
+            <li>項目2</li>
+        </ol>
+    </div>
+
+    <!-- テーブル -->
+    <div>
+        <!-- 
+        caption・・・表の性質に関する記述、いわゆる表題を記述します。
+        table・・・表の枠になります。border属性で枠線を指定できます。
+        thead・・・表の見出しを表します。
+        tbody・・・表の内容を表します。
+        tr・・・行を表します。
+        th, td・・・表のセルを表します。thは見出し用のセルに使用します。
+         -->
+
+        <table border="1">
+            <caption>表題</caption>
+            <thead>
+                <tr>
+                    <th>ヘッダ1</th>
+                    <th>ヘッダ2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1-1</td>
+                    <td>2-1</td>
+                </tr>
+                <tr>
+                    <td>1-2</td>
+                    <td>2-2</td>    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- リンク -->
+    <div>
+        <a href="https://nexseed.net">NexSeed</a>
+    </div>
+
+    <!-- ページ内リンク -->
+    <div>
+        <a href="#section-01">概要へ移動します</a>
+
+        <!-- 移動したことがわかりやすいように改行をいれています。 -->
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+       
+        <h2 id="section-01">概要</h2>    
+    </div>
+
+    <!-- フォーム -->
+    <div>
+        <form action="" method="post">
+            <div>
+                <!-- テキストボックス -->
+                メール：<input type="text" name="email"><br>
+                <!-- パスワード用のテキストボックス -->
+                パスワード：<input type="password" name="password"><br>
+            </div>
+    
+            <div>
+                <!-- セレクトボックス -->
+                <select name="list">
+                    <option value="item1">アイテム１</option>
+                    <option value="item2">アイテム２</option>
+                    <option value="item3">アイテム３</option>
+                </select>
+            </div>
+        
+            <div>
+                <!-- チェックボックス -->
+                <input type="checkbox" name="fruit" value="apple"> りんご
+                <input type="checkbox" name="fruit" value="orange"> みかん
+            </div>
+        
+            <div>
+                <!-- ラジオボックス -->
+                <input type="radio" name="region" value="kanto">関東
+                <input type="radio" name="region" value="tokai">東海
+                <input type="radio" name="region" value="tyubu">中部
+                <input type="radio" name="region" value="tyugoku">中国
+                <input type="radio" name="region" value="kyusyu">九州
+            </div>
+            <!-- フォームデータ送信ボタン -->
+            <input type="submit" value="送信">
+        </form>
+     </div>
+
+     <!-- FlexboxとCSS -->
+
+     <!-- 
+    display: flex
+        つけた要素がFlexコンテナになる
+        子要素(Flexアイテム)を自由に動かすことができる
+
+    flex-direction
+        Flexコンテナにつける
+        Flexアイテムの並び順を縦にするか横にするかを決める
+        flex-direction: columnの場合は縦並び
+        flex-direction: row、またはついてない場合は横ならび
+    justify-content
+        Flexコンテナにつける
+        flex-direction: row、またはついてない場合は左右の位置を決める
+        flex-direction: columnの場合は上下の位置を決める
+    aline-items
+        Flexコンテナにつける
+        flex-direction: row、またはついてない場合は上下の位置を決める
+        flex-direction: columnの場合は左右の位置を決める
+     -->
+
+    <h1>Flexboxサンプル</h1>
+    <h2>Flexboxを使用してない場合</h2>
+    <div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <hr>
+
+    <h2>display: flex を使用（要素が横並びになる）</h2>
+    <div class="flex1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <hr>
+
+    <h2>display: flex + justify-content 左右の位置を調整（中央寄せ）</h2>
+    <div class="flex2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <hr>
+
+    <h2>display: flex + justify-content 左右の位置を調整（幅を均等にする）</h2>
+    <div class="flex3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <hr>
+
+    <h2>display: flex + aline-items 上下の位置を調整（中央寄せ）</h2>
+    <div class="flex4">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <hr>
+
+    <h2>display: flex + flex-direction: column で縦並び</h2>
+    <div class="flex5">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <hr>
+
+    <h2>display: flex + flex-direction: column で縦並び + justify-content 上下の位置を調整</h2>
+    <div class="flex6">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <hr>
+
+    <h2>display: flex + flex-direction: center + aline-items:centerで上下左右の位置を調整(上下左右中央)</h2>
+    <div class="flex7">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <hr>
+
+
+</body>
+</html>

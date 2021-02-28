@@ -1,0 +1,65 @@
+body {
+    margin: 0 auto;
+    width: 800px;
+    text-align: center;
+}
+
+hr {
+    margin: 80px 0;
+}
+
+.box {
+    background-color: skyblue;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* display: flex を使用（要素が横並びになる） */
+.flex1 {
+    display: flex;
+}
+
+/* display: flex + justify-content 左右の位置を調整（中央寄せ） */
+.flex2 {
+    display: flex;
+    justify-content: center;
+}
+
+/* display: flex + justify-content 左右の位置を調整（幅を均等にする） */
+.flex3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* display: flex + aline-items 上下の位置を調整（中央寄せ） */
+.flex4 {
+    display: flex;
+    height: 300px;
+    background-color: lightgray;
+    align-items: center;
+}
+
+/* display: flex + flex-direction: column で縦並び */
+.flex5 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* display: flex + flex-direction: column で縦並び + justify-content 上下の位置を調整 */
+.flex6 {
+    display: flex;
+    height: 300px;
+    background-color: lightgray;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* display: flex + flex-direction: center + aline-items:centerで上下左右の位置を調整(上下左右中央) */
+.flex7 {
+    display: flex;
+    height: 300px;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+}
